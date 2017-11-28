@@ -10,6 +10,7 @@ import UIKit
 
 class SecondTableViewController: UITableViewController {
 var fileArray = [File]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

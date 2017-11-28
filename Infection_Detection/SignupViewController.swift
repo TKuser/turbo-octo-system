@@ -9,7 +9,9 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+   
+var userArray = [Users]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,16 +45,22 @@ class SignupViewController: UIViewController {
             alert.show()
         }
         
-        else if username.count < 5 {
+        else if (username.text?.characters.count)! < 5 {
             var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
             
-        } else if password.count < 8 {
+        } else if (password.text?.characters.count)! < 8 {
             var alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
          
         }else {
-        var upcoming: TableViewOneTableViewController = segue.destination as! TableViewOneTableViewController
+            
+            let currentUser = userArray.append
+            currentUser.username = username
+            currentUser.password =  password
+            
+            var upcoming: TableViewOneTableViewController = segue.destination as! TableViewOneTableViewController
+            
         
         
         // Get the new view controller using segue.destinationViewController.
@@ -61,3 +69,6 @@ class SignupViewController: UIViewController {
 }
 }
 }
+
+
+       

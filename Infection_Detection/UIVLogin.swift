@@ -9,25 +9,23 @@
 import UIKit
 
 class UIVLogin: UITableViewController {
-
+var userArray = [Users]()
     @IBOutlet var Username: UITextField!
     
     @IBOutlet var Password: UITextField!
    
+    
+    
     override func viewDidLoad() {
-      
+    }
     
-    
-   
-    
-    //@IBAction func SignuoButton(_ sender: UIButton) {        }
-}
     
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ShowDays")
         {
+         
             
             var upcoming: TableViewOneTableViewController = segue.destination as! TableViewOneTableViewController
             
@@ -37,3 +35,4 @@ class UIVLogin: UITableViewController {
     
 }
 
+}
