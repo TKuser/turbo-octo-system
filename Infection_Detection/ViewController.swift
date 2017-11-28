@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Infection_Detection
+//  FAWRT
 //
-//  Created by Haroula Kyriacou on 11/21/17.
+//  Created by Haroula Kyriacou on 10/5/17.
 //  Copyright © 2017 Haroula Kyriacou. All rights reserved.
 //
 
@@ -20,6 +20,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+  
 }
-
