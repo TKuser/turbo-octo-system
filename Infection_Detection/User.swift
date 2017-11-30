@@ -9,16 +9,16 @@
 import Foundation
 
 class User: NSObject {
-    let username: String
-    let password: String
-    let file: File?
+    let userUsername: String
+    let userPassword: String
+    let userFile: File?
     
     init(username: String, password: String, file: File?) {
         
-        self.username = username
+        self.userUsername = username
         
-        self.password = password
+        self.userPassword = password
         
-        self.file = file
+        self.userFile = file
     }
 }

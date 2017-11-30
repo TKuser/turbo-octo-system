@@ -46,7 +46,7 @@ var fileArray = [File]()
         // Configure the cell...
         let currentFile = fileArray[indexPath.row]
     //    cell.imageView?.image = currentFile.images
-        cell.detailTextLabel?.text = TIME_ABSOLUTE as! String
+        cell.detailTextLabel?.text = TIME_ABSOLUTE as? String
         
         return cell
     }

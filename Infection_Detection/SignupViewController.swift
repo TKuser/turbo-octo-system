@@ -29,7 +29,7 @@ var userArray = [User]()
     @IBOutlet var DoctorsName: UITextField!
     @IBOutlet var username: UITextField!
     @IBOutlet var password: UITextField!
-    @IBOutlet var secondpassword: UITextField!
+    @IBOutlet var secondPassword: UITextField!
     
     
     // MARK: - Navigation
@@ -40,7 +40,7 @@ var userArray = [User]()
         
         // Validate the text fields
         
-        if password == secondpassword
+        if password == secondPassword
         {var alert = UIAlertView(title: "Invalid", message: "Passwords do not match", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         }
@@ -55,14 +55,16 @@ var userArray = [User]()
          
         }else {
             
-            let currentUser = userArray.append
-            currentUser.username = username
-            currentUser.password =  password
+        var newUser = User(username: username.text!, password: password.text!, file: nil)
             
-            var upcoming: TableViewOneTableViewController = segue.destination as! TableViewOneTableViewController
+        func addUser(){
+                userArray.append(newUser)
+            }
             
         
-        
+        var upcoming: TableViewOneTableViewController = segue.destination as! TableViewOneTableViewController
+            
+    
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
