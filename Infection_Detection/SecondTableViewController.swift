@@ -45,7 +45,7 @@ var fileArray = [File]()
         
         // Configure the cell...
         let currentFile = fileArray[indexPath.row]
-        cell.imageView?.image = currentFile.surgeryImage
+    //    cell.imageView?.image = currentFile.images
         cell.detailTextLabel?.text = TIME_ABSOLUTE as! String
         
         return cell
@@ -66,10 +66,14 @@ var fileArray = [File]()
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+            var deleteCurrentFile = fileArray.images[indexPath.row]
+             fileArray.images.remove(at: indexPath.row)
         } else if editingStyle == .insert {
+            let newFileImage = File.addImage(<#T##File#>)
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
+    
     
 
     

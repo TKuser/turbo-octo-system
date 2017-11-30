@@ -11,18 +11,19 @@ import UIKit
 
 class File {
     let surgeryName: String
-    let surgeryDate: Date
-    let surgeryImage: UIImage?
+    let surgeryDate: String
+    //let surgeryImage: UIImage?
     var images = [UIImage]()
 
     
-    init(surgeryName: String, surgeryDate: Date, surgeryImage: UIImage) {
+    init(surgeryName: String, surgeryDate: String) {
        
         self.surgeryName = surgeryName
         
         self.surgeryDate = surgeryDate
-     
-        self.surgeryImage = surgeryImage
-   
+    }
+    
+    func addImage(image: UIImage) {
+        images.append(image)
     }
 }

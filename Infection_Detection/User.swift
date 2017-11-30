@@ -1,22 +1,24 @@
 //
-//  Users.swift
-//  FAWRT
+//  User.swift
+//  Infection_Detection
 //
-//  Created by Haroula Kyriacou on 11/20/17.
+//  Created by Itai Kreisler on 11/29/17.
 //  Copyright © 2017 Haroula Kyriacou. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
-class Users {
+class User: NSObject {
     let username: String
     let password: String
-    let file : File?
+    let file: File?
     
-    init(username: String, password: String, file: File) {
+    init(username: String, password: String, file: File?) {
+        
         self.username = username
+        
         self.password = password
+        
         self.file = file
     }
 }

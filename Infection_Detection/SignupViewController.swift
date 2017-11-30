@@ -10,7 +10,7 @@ import UIKit
 
 class SignupViewController: UIViewController {
    
-var userArray = [Users]()
+var userArray = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

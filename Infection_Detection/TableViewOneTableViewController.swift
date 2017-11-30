@@ -68,8 +68,12 @@ class TableViewOneTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+            var deleteCurrentFile = fileArray[indexPath.row]
+            deleteCurrentFile.remove
+            fileArray.remove(at: indexPath.row)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            
         }    
     }
     
